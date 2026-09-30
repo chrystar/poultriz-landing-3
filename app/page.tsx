@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import PhoneFrame from "../components/PhoneFrame";
 
 // TODO: paste your Android download link here (APK or Play Store URL).
-const ANDROID_URL = "#";
+const ANDROID_URL = "https://www.mediafire.com/file/2sh5itq4fs8lhh2/poultriz.apk/file";
 
 function DownloadIcon() {
   return (
@@ -23,8 +23,10 @@ function DownloadButtons({ onIos, dark = false }: { onIos: () => void; dark?: bo
     : "border border-ink/20 text-ink hover:bg-ink/5";
   return (
     <div className="flex flex-col gap-3 sm:flex-row">
-      <a
+            <a
         href={ANDROID_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`inline-flex items-center justify-center gap-2.5 rounded-lg px-6 py-3.5 text-[0.95rem] font-semibold transition-colors ${primary}`}
       >
         <DownloadIcon />
